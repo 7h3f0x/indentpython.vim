@@ -4,3 +4,7 @@ This indentation script for python tries to match more closely what is suggested
 
 Comments are welcome!
 
+## Changes
+
+- Added tree-sitter support instead of using synId stuff(deactivated upon using tree-sitter highlighting)
+

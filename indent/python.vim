@@ -25,7 +25,7 @@ function! s:SearchParensPair()
     
     " Skip strings and comments and don't look too far
     let skip = "line('.') < " . (line - s:maxoff) . " ? dummy :" .
-                \ 'synIDattr(synID(line("."), col("."), 0), "name") =~? ' .
+                \ "luaeval(\"require 'nvim-treesitter.ts_utils'.get_node_at_cursor(0):type()\") =~? " .
                 \ '"string\\|comment"'
 
     " Search for parentheses
